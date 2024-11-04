@@ -1,0 +1,443 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1b1b1b; /* Fondo oscuro elegante */
+    color: #f4f4f4;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #2c2c2c; /* Fondo oscuro para el header */
+    color: #d4af37; /* Texto dorado para el título */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #d4af37; /* Color dorado para enlaces */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+    color: #b22222; /* Color rojo oscuro al pasar el mouse */
+}
+
+.btn-agendar {
+    background-color: #b22222; /* Botón rojo oscuro */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-agendar:hover {
+    background-color: #d4af37; /* Cambiar a dorado al pasar el mouse */
+    color: #1b1b1b;
+}
+
+.btn-citas-agendadas {
+    background-color: #2c2c2c; /* Fondo oscuro para el botón */
+    color: #d4af37; /* Texto dorado */
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 10px 0; /* Espaciado superior e inferior */
+    display: inline-block; /* Permite el espaciado alrededor */
+    border: 1px solid #d4af37; /* Borde dorado */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra opcional */
+    margin-right: 10px; /* Espacio a la derecha */
+    font-size: 1.1em; /* Aumentar el tamaño de la letra */
+}
+
+.btn-citas-agendadas:hover {
+    background-color: #d4af37; /* Cambiar a dorado al pasar el mouse */
+    color: #1b1b1b; /* Texto oscuro al pasar el mouse */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra más intensa en hover */
+}
+
+/* Estilos para cada cita */
+#citas-agendadas ul li {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Centra verticalmente si hay otros elementos */
+    padding: 8px 0;
+}
+
+/* Estilo específico para el botón de eliminar */
+#citas-agendadas ul li button {
+    padding: 8px 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px; /* Añade un margen derecho para separar del borde */
+}
+
+/* Cambia el color del botón al pasar el cursor */
+#citas-agendadas ul li button:hover {
+    background-color: #ff1a1a;
+}
+
+
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Aparece por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa toda la altura */
+    overflow: auto; /* Habilita desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+}
+
+.modal-content {
+    background-color: #2c2c2c; /* Fondo oscuro para el contenido de la modal */
+    margin: 15% auto; /* Centramos verticalmente */
+    padding: 20px;
+    border: 1px solid #d4af37; /* Borde dorado */
+    width: 80%; /* Ancho de la modal */
+    max-width: 600px; /* Ancho máximo de la modal */
+    border-radius: 8px; /* Esquinas redondeadas */
+    color: #f4f4f4; /* Color de texto */
+}
+
+.close {
+    color: #d4af37; /* Color dorado para el botón de cerrar */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Indicar que es un botón */
+}
+
+.close:hover,
+.close:focus {
+    color: #b22222; /* Cambiar color al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+
+main {
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #d4af37; /* Títulos dorados */
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.barbero-foto img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+#agendar-cita form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+#agendar-cita form label,
+#agendar-cita form input,
+#agendar-cita form button {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #d4af37; /* Color dorado */
+}
+
+#agendar-cita form input,
+#agendar-cita form button {
+    padding: 10px;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    background-color: #000;
+    color: #f4f4f4;
+}
+
+#agendar-cita form button {
+    cursor: pointer;
+    background-color: #b22222; /* Rojo oscuro */
+}
+
+#agendar-cita form button:hover {
+    background-color: #d4af37; /* Cambiar a dorado al pasar el mouse */
+    color: #1b1b1b;
+}
+
+.galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.galeria-imagenes img {
+    width: 100%;
+    height: 300px; /* Aumenta la altura de las imágenes */
+    object-fit: cover; /* Mantiene la proporción y recorta */
+    border-radius: 8px;
+    border: 3px solid #d4af37; /* Borde dorado para imágenes */
+}
+
+
+/* Estilo para el campo de fecha */
+input[type="date"] {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Estilo para el ícono del calendario */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Estilo para el campo de tiempo */
+input[type="time"] {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Estilo para el ícono del reloj */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Estilos existentes... */
+
+/* Nuevos estilos para la sección de servicios */
+#servicios {
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en la fila superior */
+    gap: 20px;
+    grid-template-rows: auto auto; /* Dos filas */
+    align-items: start;
+}
+
+.servicio-card {
+    background-color: #333;
+    border-radius: 8px;
+    border: 2px solid #ffd700; /* Bordes dorados */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 100%; /* Ajusta la altura de la tarjeta */
+}
+
+.servicio-card:hover {
+    background-color: #fff; /* Fondo blanco al pasar el cursor */
+    color: #000; /* Texto negro al pasar el cursor */
+}
+
+.servicio-card:hover .servicio-titulo h3,
+.servicio-card:hover .servicio-descripcion p {
+    color: #000; /* Cambia el color del texto a negro */
+}
+
+.servicio-icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.servicio-titulo h3 {
+    color: #ffd700; /* Color dorado por defecto */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.servicio-descripcion p {
+    color: #f4f4f4; /* Color de texto por defecto */
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Estilo para la tarjeta en el medio */
+.middle-card {
+    grid-column: 1 / 4; /* Ocupa toda la fila inferior */
+    max-width: 300px; /* Ancho máximo específico */
+    margin: 0 auto; /* Centra la tarjeta */
+    background-color: #444; /* Un color ligeramente diferente si deseas */
+    border: 2px solid #ffd700; /* Bordes dorados */
+    text-align: center;
+}
+
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+
+    /* Ajuste del body */
+    body {
+        padding: 10px;
+    }
+
+    /* Header */
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Cambia la disposición del menú a vertical */
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajuste de la galería de imágenes */
+    .galeria-imagenes {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    /* Ajuste de la sección de servicios */
+    .servicios-container {
+        grid-template-columns: 1fr; /* Una sola columna para todos los servicios */
+    }
+
+    .servicio-card {
+        max-width: 100%; /* Tarjetas ocupan el 100% del ancho disponible */
+    }
+
+    .middle-card {
+        grid-column: auto; /* Ajuste automático para evitar errores */
+        max-width: 100%;
+    }
+
+    /* Ajuste del formulario de agendar citas */
+    #agendar-cita form {
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+
+    /* Ajuste del body */
+    body {
+        padding: 20px;
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 2.2rem; /* Título ligeramente más pequeño */
+    }
+
+    header nav ul {
+        flex-direction: row; /* Mantén el menú en una fila */
+        flex-wrap: wrap; /* Permite que los elementos del menú se ajusten si es necesario */
+    }
+
+    header nav ul li {
+        margin: 5px 10px;
+    }
+
+    /* Galería de imágenes */
+    .galeria-imagenes {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajuste flexible de la galería */
+    }
+
+    /* Sección de servicios */
+    .servicios-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+    }
+
+    .middle-card {
+        max-width: 100%; /* Ajuste de la tarjeta del medio */
+    }
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 1025px) {
+
+    /* Ajustes de ancho */
+    main {
+        width: 80%;
+    }
+
+    /* Galería d    e imágenes */
+    .galeria-imagenes {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas para pantallas grandes */
+    }
+
+    /* Sección de servicios */
+    .servicios-container {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas para pantallas grandes */
+    }
+}
+

@@ -1,0 +1,95 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0f7fa; /* Fondo azul claro */
+}
+
+body{
+    background-image: url(../images/fondo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF; /* Color del encabezado */
+    color: white;
+    padding: 10px 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.filtros {
+    margin: 20px 0;
+}
+
+.filtros input {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para la tabla de citas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Fondo blanco para la tabla */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Borde de las celdas */
+    padding: 12px; /* Espaciado interno */
+    text-align: left;
+}
+
+tr {
+    background-color: white; /* Color de fondo blanco para todas las filas */
+}
+
+/* Opcional: Estilo para el encabezado */
+th {
+    background-color: #007BFF; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color gris claro para filas pares */
+}
+
+tr:hover {
+    background-color: #e0e0e0; /* Color gris para fila al pasar el mouse */
+}
+
+/* Estilo para botones de acciones */
+.actions {
+    display: flex; /* Flex para que los botones se distribuyan bien */
+    gap: 10px; /* Espaciado entre botones */
+}
+
+button {
+    padding: 10px; /* Tamaño del botón */
+    background-color: #FF5733; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 120px; /* Aumentado para que sean más anchos */
+}
+
+button:hover {
+    background-color: #C70039; /* Color del botón al pasar el mouse */
+}
